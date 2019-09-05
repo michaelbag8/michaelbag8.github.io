@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: grey;
+    font-family: 'Arial, sans-serif';
+}
+#container{
+    width: 980px;
+    margin: 0 auto 0 auto;
+    background-color: #ffff
+}
+/* navigation starts */
+#nav_bar{
+    background-color: rgb(26, 6, 46);
+    padding: 20px;
+}
+#nav_bar  li{
+   display: inline-block;
+   background-color: rgb(26, 6, 46);
+   padding: 5px;
+   list-style-type: none;
+}
+#nav_bar :hover{
+    background-color: white;
+}
+ul a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+ul a:hover{
+    color: rgb(26, 6, 46);
+}
+/* navigation ends */
+.top_right{
+    float: right;
+    background: rgb(26, 6, 46);
+    height: 400px;
+    width: 400px;
+    border-radius: 0px 0px 0px 300px;
+}
+img{
+    height: 300px;
+    width: 300px;
+    border-radius: 0px 0px 0px 300px;
+    margin: 80px 20px 90px 70px;
+}   
+.top-left{
+    text-align: center;
+    margin-top: 180px;
+}
+.name{
+    color: rgb(26, 6, 46);
+    font-weight: bold;
+}
+.summary{
+    margin-top: 100px;
+    padding: 10px;
+}
+#profile_summary , 
+#skills , #personal_details ,
+#experience ,#education , 
+#other , #ref{
+    color: rgb(26, 6, 46);
+}
+hr{
+    background-color: rgb(26, 6, 46);
+    height: 10px;
+}
+.inline{
+    display:inline-block;
+    width: 280px;
+    padding: 5px;
+    margin: 0 6px 0 6px;
+}
+.inlineED{
+    display:inline-block;
+    width: 280px;
+    padding: 5px;
+    margin: 0 6px 0 6px;
+    border-left: 2px solid rgb(26, 6, 46);
+}
+.inline1{
+    display:inline-block;
+    width: 290px;
+    padding: 2px;
+    margin: 0 4px 0 13px;
+    /* border-left: 2px solid rgb(26, 6, 46); */
+}
+.inline2{
+    display:inline-block;
+    width: 430px;
+    padding: 20px;
+    margin: 0 6px 0 10px;
+    border-left: 2px solid rgb(26, 6, 46);
+}
+strong ,em {
+    color:rgb(26, 6, 46);
+}
+meter{
+    width: 200px;
+    background-color: rgb(26, 6, 46);
+}
+
+#ref , #experience,
+#education, #skills, #other{
+    text-align: center;
+}
+.footer{
+    text-align: center;
+    height: 50px;
+    color: white;
+    background-color: rgb(26, 6, 46);
+}
+i{
+    margin: 5px 15px 0 15px;
+    color: white;
+    padding: 4px;
+}
