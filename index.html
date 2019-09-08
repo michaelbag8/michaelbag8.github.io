@@ -174,29 +174,29 @@
     </div>
     <div id="modal-with-form" class="contact-modal hide-modal">
         <div class="container">  
-                <form id="contact-form" action="mailto:michaelbulusgambo@gmail.com" method="POST">
+                <form id="contact-form" action="https://formspree.io/michaelbulusgambo@gmail.com" method="POST">
                   <h3>Reach Me Here</h3>
                   <h4>Fill This Form To Get In Touch With Me</h4>
                   <span id="close-btn" onclick="visible()">&times;</span>
 
                   <fieldset>
-                    <input type="text" id="title" required minlength="4" autofocus placeholder="Message Title">
+                    <input type="text" name="title" id="title" required minlength="4" autofocus placeholder="Message Title">
                     
                   </fieldset>
 
                   
                   <fieldset>
-                    <input type="text" id="name" required minlength="4" placeholder="Your Name">
+                    <input type="text" name="name" id="name" required minlength="4" placeholder="Your Name">
                     
                   </fieldset>
                   <fieldset>
-                    <input type="email" id="email" required placeholder="Email Here...">
+                    <input type="email" name="email" id="email" required placeholder="Email Here...">
                     
                   </fieldset>
                   
                  
                   <fieldset>
-                    <textarea id="message" minlength="20" required placeholder="Your Message Here..."></textarea>
+                    <textarea id="message" name="textarea" minlength="20" required placeholder="Your Message Here..."></textarea>
                   </fieldset>
                   <fieldset>
                     <button name="submit" id="contact-submit"><i class="fa fa-send fa-2x"></i>Submit</button>
