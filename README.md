@@ -1,1 +1,2 @@
-# michaelbag8.github.io
+# Michael BAG Portfolio
+`michaelbag8.github.io`
