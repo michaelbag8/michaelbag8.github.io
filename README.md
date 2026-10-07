@@ -1,4 +1,2 @@
 # Michael BAG Portfolio
-`michaelbag8.github.io`
-[Portfolio Link](michaelbag8.github.io)
-<michaelbag8.github.io>
+[Visit My Portfolio](michaelbag8.github.io "Michael BAG Portfolio")
