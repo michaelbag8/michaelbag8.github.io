@@ -24,12 +24,50 @@
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: var(--bg);
+  font-family: 'Josefin Sans', sans-serif;
   color: var(--text);
-  transition: background 0.2s ease, color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  position: relative;
+
+  /* Creative background: a slowly drifting mesh of soft color blobs over
+     the base color, plus a faint grain texture for depth \u2014 rather than
+     a single flat fill. color-mix() keeps the blobs theme-aware, since
+     --accent already changes between dark and light mode. */
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(640px circle, color-mix(in srgb, var(--accent) 26%, transparent), transparent 65%),
+    radial-gradient(540px circle, color-mix(in srgb, #7C5CFF 22%, transparent), transparent 65%),
+    radial-gradient(580px circle, color-mix(in srgb, var(--accent) 16%, transparent), transparent 65%),
+    radial-gradient(460px circle, color-mix(in srgb, #FF5C8A 16%, transparent), transparent 65%);
+  background-repeat: no-repeat;
+  background-position: 8% 12%, 92% 8%, 85% 92%, 12% 95%;
+  background-attachment: fixed;
+  animation: bg-drift 30s ease-in-out infinite alternate;
 }
-.display { font-family: 'Space Grotesk', sans-serif; margin: 0; }
+
+@keyframes bg-drift {
+  from { background-position: 8% 12%, 92% 8%, 85% 92%, 12% 95%; }
+  to   { background-position: 16% 22%, 84% 18%, 76% 82%, 22% 86%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body { animation: none; }
+}
+
+/* Faint grain layer on top of the gradient mesh, for texture rather than
+   a flat wash of color. Sits behind the sidebar and content via z-index. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.04;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.display { font-family: 'Josefin Sans', sans-serif; font-weight: 600; margin: 0; }
 
 a { color: inherit; }
 
@@ -58,7 +96,7 @@ a { color: inherit; }
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-weight: 700;
   font-size: 22px;
 }
